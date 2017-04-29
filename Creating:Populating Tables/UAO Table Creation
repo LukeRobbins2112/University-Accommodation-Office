@@ -1,0 +1,202 @@
+CREATE TABLE Course(
+courseNo CHAR(4) NOT NULL PRIMARY KEY,
+courseTitle VARCHAR(24) NOT NULL,
+courseYear CHAR(4),
+courseLeader VARCHAR(24),
+telNo CHAR(14),
+roomNo CHAR(4),
+deptName VARCHAR(20)
+
+);
+
+CREATE TABLE AdvisorOfStudies(
+advisorNo CHAR(8) NOT NULL PRIMARY KEY,
+firstName VARCHAR(16) NOT NULL,
+lastName VARCHAR(24) NOT NULL,
+position VARCHAR(24),
+department VARCHAR(24),
+telNo CHAR(14),
+roomNumber CHAR(4)
+
+);
+
+CREATE TABLE STAFF(
+staffNo CHAR(8) NOT NULL PRIMARY KEY,
+firstName VARCHAR(16) NOT NULL,
+lastName VARCHAR(20) NOT NULL,
+streetAddress VARCHAR(30),
+cityAddress VARCHAR(20),
+postcodeAddress CHAR(5),
+dateOfBirth DATE,
+sex CHAR(1),
+position VARCHAR(18),
+location VARCHAR(18)
+
+);
+
+
+CREATE TABLE Student(
+matriculationNo CHAR(8) NOT NULL PRIMARY KEY,
+firstName VARCHAR(16) NOT NULL,
+lastName VARCHAR(20) NOT NULL,
+streetAddress VARCHAR(30),
+cityAddress VARCHAR(20),
+postcodeAddress VARCHAR(5),
+dateOfBirth DATE NOT NULL,
+sex CHAR(1),
+studentCategory VARCHAR(12),
+nationality VARCHAR(15),
+smoker CHAR(1),
+specialNeeds CHAR(1),
+additionalComments VARCHAR(30),
+currentStatus CHAR(2),
+advisorNo CHAR(8),
+courseNo CHAR(4)
+
+);
+
+ALTER TABLE Student ADD CONSTRAINT fk_advisorNo FOREIGN KEY (advisorNo) REFERENCES AdvisorOfStudies(advisorNo);
+ALTER TABLE Student ADD CONSTRAINT fk_courseNo FOREIGN KEY (courseNo) REFERENCES Course(courseNo);
+
+
+
+
+CREATE TABLE NextOfKin(
+kinNo CHAR(8) NOT NULL PRIMARY KEY,
+firstName VARCHAR(16),
+lastName VARCHAR(20),
+streetAddress VARCHAR(30),
+cityAddress VARCHAR(20),
+postcodeAddress VARCHAR(5),
+relationship VARCHAR(16),
+telNo CHAR(14),
+
+studentNo CHAR(8)
+
+);
+
+ALTER TABLE NextOfKin ADD CONSTRAINT fk_studentOfKin FOREIGN KEY (studentNo) REFERENCES Student(matriculationNo);
+
+
+
+
+CREATE TABLE HallOfResidence(
+hallNo CHAR(8) NOT NULL PRIMARY KEY,
+hallName VARCHAR(15) NOT NULL,
+streetAddress VARCHAR(30),
+cityAddress VARCHAR(20),
+postcodeAddress VARCHAR(5),
+telNo CHAR(14),
+
+managerNo CHAR(8)
+
+);
+
+ALTER TABLE HallOfResidence ADD CONSTRAINT fk_managerNo FOREIGN KEY (managerNo) REFERENCES Staff(staffNo);
+
+
+
+
+CREATE TABLE HallRoom(
+placeNo CHAR(4) NOT NULL PRIMARY KEY,
+roomNo CHAR(4) NOT NULL,
+rentRate SMALLINT,
+
+hallNo CHAR(8)
+
+);
+
+ALTER TABLE HallRoom ADD CONSTRAINT fk_hallNo FOREIGN KEY (hallNo) REFERENCES HallOfResidence(hallNo);
+
+
+
+
+CREATE TABLE Flat(
+flatNo CHAR(4) NOT NULL PRIMARY KEY,
+streetAddress VARCHAR(30),
+cityAddress VARCHAR(20),
+postcodeAddress VARCHAR(5),
+roomsAvailable SMALLINT
+
+);
+
+
+
+CREATE TABLE FlatRoom(
+placeNo CHAR(4) NOT NULL PRIMARY KEY,
+roomNo CHAR(4) NOT NULL,
+rentRate SMALLINT,
+
+flatNo CHAR(4)
+
+);
+
+ALTER TABLE FlatRoom ADD CONSTRAINT fk_flatNo FOREIGN KEY (flatNo) REFERENCES Flat(flatNo);
+
+
+
+CREATE TABLE Lease(
+leaseNo CHAR(8) NOT NULL PRIMARY KEY,
+leaseDuration SMALLINT,
+entryDate DATE,
+leaveDate DATE,
+year SMALLINT,
+rentRate SMALLINT,
+
+stuMatriculationNo CHAR(8),
+hallPlaceNo CHAR(4),
+flatPlaceNo CHAR(4)
+
+);
+
+ALTER TABLE Lease ADD CONSTRAINT fk_stuMatNo FOREIGN KEY (stuMatriculationNo) REFERENCES Student(matriculationNo);
+ALTER TABLE Lease ADD CONSTRAINT fk_hallPlaceNo FOREIGN KEY (hallPlaceNo) REFERENCES HallRoom(placeNo);
+ALTER TABLE Lease ADD CONSTRAINT fk_flatPlaceNo FOREIGN KEY (flatPlaceNo) REFERENCES FlatRoom(placeNo);
+
+
+
+
+CREATE TABLE Invoice(
+invoiceNo CHAR(10) NOT NULL PRIMARY KEY,
+semester SMALLINT,
+paymentDue SMALLINT,
+
+leaseNo CHAR(8)
+
+);
+
+ALTER TABLE Invoice ADD CONSTRAINT fk_leaseNo FOREIGN KEY (leaseNo) REFERENCES Lease(leaseNo);
+
+
+
+
+CREATE TABLE Payment(
+paymentNo CHAR(12) NOT NULL PRIMARY KEY,
+amount SMALLINT,
+invoicePayDate DATE,
+paymentMethod VARCHAR(16),
+firstReminderDate DATE,
+secondReminderDate DATE,
+
+invoiceNo CHAR(10)
+
+);
+
+ALTER TABLE Payment ADD CONSTRAINT fk_paying_invoiceNo FOREIGN KEY (invoiceNo) REFERENCES Invoice(invoiceNo);
+
+
+
+
+CREATE TABLE Inspection(
+inspectionNo CHAR(12) NOT NULL PRIMARY KEY,
+inspectionDate DATE,
+satisfactionCondition CHAR(1),
+comments VARCHAR(36),
+
+flatNo CHAR(4),
+inspectorNo CHAR(8)
+
+);
+
+ALTER TABLE Inspection ADD CONSTRAINT fk_inspect_flatNo FOREIGN KEY (flatNo) REFERENCES Flat(flatNo);
+ALTER TABLE Inspection ADD CONSTRAINT fk_inspectorNo FOREIGN KEY (inspectorNo) REFERENCES Staff(staffNo);

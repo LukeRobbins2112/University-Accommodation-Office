@@ -1,0 +1,27 @@
+SELECT firstName || ' ' || lastName ManagerName, h.telNo, h.hallName FROM Staff s, HallOfResidence h WHERE s.staffNo = h.managerNo ORDER BY s.staffNo; 
+
+SELECT l.*, s.firstName, s.lastName FROM Lease l LEFT OUTER JOIN Student s ON l.stuMatriculationNo = s.matriculationNo;
+
+SELECT * FROM Lease WHERE leaseDuration = 3;
+
+SELECT s.firstName || ' ' || s.lastName StudentName, s.matriculationNo, SUM(p.amount) FROM Payment p, Invoice i, Lease l, Student s WHERE ((s.matriculationNo = l.stuMatriculationNo) AND (l.leaseNo = i.leaseNo) AND (p.invoiceNo = i.invoiceNo)) AND (s.matriculationNo = '70924181') GROUP BY s.matriculationNo, s.firstName || ' ' || s.lastName;
+
+SELECT s.firstName || ' ' || s.lastName StudentName, s.matriculationNo FROM Student s INNER JOIN Lease l ON (l.stuMatriculationNo = s.matriculationNo) INNER JOIN Invoice i ON (i.leaseNo = l.leaseNo) LEFT OUTER JOIN Payment p ON p.invoiceNo = i.invoiceNo WHERE (p.amount IS NULL) OR ((p.amount < i.paymentDue) OR (p.invoicePayDate > to_date('01-MAY-18','DD-MON-YY')));
+
+SELECT * FROM Inspection i INNER JOIN Flat f ON i.flatNo = f.flatNo WHERE satisfactionCondition = 'N';
+
+SELECT s.firstName, s.lastName, s.matriculationNo, h.roomNo, h.placeNo FROM Student s, HallRoom h, Lease l WHERE (s.matriculationNo = l.stuMatriculationNo) AND (l.hallPlaceNo = h.placeNo) AND h.hallNo = '46973507';
+
+SELECT * FROM Student where currentStatus = 'WT'; 
+
+SELECT COUNT(*), studentCategory FROM Student GROUP BY studentCategory;
+
+SELECT s.firstName || ' ' || s.lastName StudentName, s.matriculationNo FROM Student s LEFT JOIN NextOfKin n ON (s.matriculationNo =  n.studentNo) WHERE n.studentNo IS NULL;
+
+SELECT a.firstname, a.lastName, a.telNo FROM AdvisorOfStudies a, Student s WHERE s.matriculationNo = '70924181' AND (a.advisorNo = s.advisorNo);
+
+SELECT h.hallName, AVG(rentRate), MIN(rentRate), MAX(rentRate) FROM HallRoom r, HallOfResidence h WHERE r.hallNo = h.hallNo GROUP BY h.hallName;
+
+SELECT h.hallName, COUNT(*) AS RoomCount FROM HallRoom r, HallOfResidence h WHERE h.hallNo = r.hallNo GROUP BY hallName;
+
+SELECT staffNo, firstName || ' ' || lastName StaffName,(round(MONTHS_BETWEEN(to_date(dateOfBirth,'DD-MON-YY'), sysdate)/12)) AS Age, location FROM Staff WHERE ((round(MONTHS_BETWEEN(to_date(dateOfBirth,'DD-MON-YY'), sysdate)/12)) > 60);

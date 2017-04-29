@@ -1,0 +1,128 @@
+INSERT INTO Course (courseNo,courseTitle,courseYear, courseLeader, telNo,roomNo,deptName) VALUES ('0948','Physics Intro',2016, 'Prof Robbins', '(931) 327-5453',5698,'Physics');
+INSERT INTO Course (courseNo,courseTitle,courseYear, courseLeader, telNo,roomNo,deptName) VALUES ('8032','Bio Lab',2017, 'Prof White', '(204) 333-7839',3342,'Biology');
+INSERT INTO Course (courseNo,courseTitle,courseYear, courseLeader, telNo,roomNo,deptName) VALUES ('6892','Chem Lab, est',2016, 'Prof Johnson', '(196) 275-8156',2736,'Chemistry');
+INSERT INTO Course (courseNo,courseTitle,courseYear, courseLeader, telNo,roomNo,deptName) VALUES ('3629','Psych Seminar',2016, 'Prof Alan', '(397) 489-8151',5175,'Psychology');
+INSERT INTO Course (courseNo,courseTitle,courseYear, courseLeader, telNo,roomNo,deptName) VALUES ('8440','Calc 3',2017, 'Prof Smith', '(489) 275-4946',3811,'Mathematics');
+INSERT INTO Course (courseNo,courseTitle,courseYear, courseLeader, telNo,roomNo,deptName) VALUES ('4989','Econ 401',2018, 'Prof Chow', '(762) 426-1485',5575,'Economics');
+INSERT INTO Course (courseNo,courseTitle,courseYear, courseLeader, telNo,roomNo,deptName) VALUES ('6728','Rocketry',2018, 'Prof Rothstein', '(740) 104-1617',1110,'Engineering');
+
+
+
+INSERT INTO AdvisorOfStudies (advisorNo,firstName,lastName,position,department,telNo,roomNumber) VALUES ('37495506','Noel','Preston','Advisor','Mathematics','(365) 142-6473',3969);
+INSERT INTO AdvisorOfStudies (advisorNo,firstName,lastName,position,department,telNo,roomNumber) VALUES ('07228950','Kitra','Vinson','Counselor','Engineering','(938) 101-4322',4317);
+INSERT INTO AdvisorOfStudies (advisorNo,firstName,lastName,position,department,telNo,roomNumber) VALUES ('98915557','Caesar','Barnes','Advisor','Physics','(379) 514-7567',5936);
+INSERT INTO AdvisorOfStudies (advisorNo,firstName,lastName,position,department,telNo,roomNumber) VALUES ('78305173','Skyler','Snider','Counselor','Computer Science','(772) 340-6060',1379);
+INSERT INTO AdvisorOfStudies (advisorNo,firstName,lastName,position,department,telNo,roomNumber) VALUES ('60807138','Carolyn','Douglas','Prog Manager','Psychology','(523) 323-2003',2675);
+INSERT INTO AdvisorOfStudies (advisorNo,firstName,lastName,position,department,telNo,roomNumber) VALUES ('77787781','Hanna','Figueroa','Dept Head','History','(811) 820-9195',3583);
+
+
+
+
+INSERT INTO Staff (staffNo,firstName,lastName,streetAddress,cityAddress,postcodeAddress,dateOfBirth,sex,position,location) VALUES ('84957636','Janna','Short','9951 Fermentum St.','Belgrave','74990','19-AUG-57','M','Manager','Mason Hall');
+INSERT INTO Staff (staffNo,firstName,lastName,streetAddress,cityAddress,postcodeAddress,dateOfBirth,sex,position,location) VALUES ('18506643','Fitzgerald','Willis','8377 Metus. Street','Langford','82888','29-SEP-75','M','Manager','Shale Flat');
+INSERT INTO Staff (staffNo,firstName,lastName,streetAddress,cityAddress,postcodeAddress,dateOfBirth,sex,position,location) VALUES ('08871813','Karleigh','Delgado','1416 Vitae Avenue','Bharuch','52606','19-OCT-87','F','Cleaner','Berkeley');
+INSERT INTO Staff (staffNo,firstName,lastName,streetAddress,cityAddress,postcodeAddress,dateOfBirth,sex,position,location) VALUES ('67687569','Amber','Rosales','7835 Dolor Ave','Kayseri','37667','06-NOV-64','F','Cleaner','Bates I');
+INSERT INTO Staff (staffNo,firstName,lastName,streetAddress,cityAddress,postcodeAddress,dateOfBirth,sex,position,location) VALUES ('46132948','Jena','Pierce','3291 Luctus Ave','Bocchigliero','37926','02-DEC-76','M','Inspector','Morgan Flat');
+INSERT INTO Staff (staffNo,firstName,lastName,streetAddress,cityAddress,postcodeAddress,dateOfBirth,sex,position,location) VALUES ('96409394','Garrett','Santiago','512 Dapibus Av.','Villeneuve-d''Ascq','10987','10-FEB-91','M','Inspector','TDX Flat');
+
+
+
+INSERT INTO Student (matriculationNo,firstName,lastName,streetAddress,cityAddress,postcodeAddress,dateOfBirth,sex,studentCategory,nationality,smoker,specialNeeds,additionalComments,currentStatus,advisorNo,courseNo) VALUES ('70924181','Zelda','Buchanan','460-8666 Orci, Street','Blaenau Ffestiniog','59579','07-OCT-95','M','Freshman','American','Y','Y','Nothing noted','PL','37495506','0948');
+INSERT INTO Student (matriculationNo,firstName,lastName,streetAddress,cityAddress,postcodeAddress,dateOfBirth,sex,studentCategory,nationality,smoker,specialNeeds,additionalComments,currentStatus,advisorNo,courseNo) VALUES ('48061991','Oliver','Santana','1572 Maecenas Av.','Fosses-la-Ville','51090','02-NOV-96','M','Sophomore','American','N','N','Nothing noted','PL','37495506','4989');
+INSERT INTO Student (matriculationNo,firstName,lastName,streetAddress,cityAddress,postcodeAddress,dateOfBirth,sex,studentCategory,nationality,smoker,specialNeeds,additionalComments,currentStatus,advisorNo,courseNo) VALUES ('37182658','Hammett','Duke','P.O. Box 335, 8947 Sem Street','Tobermory','16797','07-DEC-98','F','Junior','American','Y','Y','Nothing noted','PL','07228950','0948');
+INSERT INTO Student (matriculationNo,firstName,lastName,streetAddress,cityAddress,postcodeAddress,dateOfBirth,sex,studentCategory,nationality,smoker,specialNeeds,additionalComments,currentStatus,advisorNo,courseNo) VALUES ('29266565','Lee','Rivera','P.O. Box 962, 9654 Sed St.','Groot-Bijgaarden','46360','10-JAN-98','F','Senior','French','N','N','Nothing noted','PL','07228950','4989');
+INSERT INTO Student (matriculationNo,firstName,lastName,streetAddress,cityAddress,postcodeAddress,dateOfBirth,sex,studentCategory,nationality,smoker,specialNeeds,additionalComments,currentStatus,advisorNo,courseNo) VALUES ('95331889','Byron','Mcclain','P.O. Box 828, 3645 Aliquam St.','Osimo','57132','05-FEB-97','M','Freshman','Spanish','Y','Y','Needs wheelchair access','PL','98915557','3629');
+INSERT INTO Student (matriculationNo,firstName,lastName,streetAddress,cityAddress,postcodeAddress,dateOfBirth,sex,studentCategory,nationality,smoker,specialNeeds,additionalComments,currentStatus,advisorNo,courseNo) VALUES ('50176911','Frances','Parker','1294 Ante Avenue','Abingdon','86292','30-MAY-96','M','Sophomore','German','N','N','Nothing noted','PL','78305173','8032');
+INSERT INTO Student (matriculationNo,firstName,lastName,streetAddress,cityAddress,postcodeAddress,dateOfBirth,sex,studentCategory,nationality,smoker,specialNeeds,additionalComments,currentStatus,advisorNo,courseNo) VALUES ('67029780','Lael','Peck','P.O. Box 894, 6634 Urna, St.','Viranşehir','97933','25-JUN-97','F','Junior','American','Y','Y','needs assistance','PL','60807138','4989');
+INSERT INTO Student (matriculationNo,firstName,lastName,streetAddress,cityAddress,postcodeAddress,dateOfBirth,sex,studentCategory,nationality,smoker,specialNeeds,additionalComments,currentStatus,advisorNo,courseNo) VALUES ('97931360','Hadley','Montgomery','P.O. Box 846, 8156 Enim. St.','Olen','97821','15-AUG-96','F','Senior','American','N','N','Nothing noted','PL','77787781','4989');
+INSERT INTO Student (matriculationNo,firstName,lastName,streetAddress,cityAddress,postcodeAddress,dateOfBirth,sex,studentCategory,nationality,smoker,specialNeeds,additionalComments,currentStatus,advisorNo,courseNo) VALUES ('97331360','Haey','Monty','44 Enim. St.','Olen','97821','19-AUG-96','F','Senior','American','N','N','Nothing noted','WT','77787781','4989');
+
+
+INSERT INTO NextOfKin (kinNo,firstName,lastName,streetAddress,cityAddress,postcodeAddress,relationship,telNo,studentNo) 
+VALUES ('99681395','Kitra','Preston','3728 Leo Rd.','Melrose','00334','Mother','(376) 276-3759','70924181');
+INSERT INTO NextOfKin (kinNo,firstName,lastName,streetAddress,cityAddress,postcodeAddress,relationship,telNo,studentNo) 
+VALUES ('08371897','Brenda','Ward','171-1057 Lacinia St.','Vaughan','57810','Mother','(393) 461-2253','48061991');
+INSERT INTO NextOfKin (kinNo,firstName,lastName,streetAddress,cityAddress,postcodeAddress,relationship,telNo,studentNo) 
+VALUES ('48664415','Paula','Madden','180-8897 Eu Road','Kawawachikamach','40484','Mother','(332) 816-4223','37182658');
+INSERT INTO NextOfKin (kinNo,firstName,lastName,streetAddress,cityAddress,postcodeAddress,relationship,telNo,studentNo) 
+VALUES ('95543219','Otto','Henson','Faucibus Road','Liers','99880','Father','(197) 870-4451','29266565');
+INSERT INTO NextOfKin (kinNo,firstName,lastName,streetAddress,cityAddress,postcodeAddress,relationship,telNo,studentNo) 
+VALUES ('47938332','Mona','Brady','571-3885 Urna. Rd.','Porto Cesareo','21920','Mother','(294) 619-0854','95331889');
+INSERT INTO NextOfKin (kinNo,firstName,lastName,streetAddress,cityAddress,postcodeAddress,relationship,telNo,studentNo) 
+VALUES ('16192659','Carter','Glenn','Volutpat. Avenue','Roccanova','37765','Brother','(375) 941-0326','50176911');
+
+
+
+
+INSERT INTO HallOfResidence (hallNo,hallName,streetAddress,cityAddress,postcodeAddress,telNo,managerNo) VALUES ('46973507','Oren Hall','5669 Curabitur Street','Ham-sur-Sambre','37220','(363) 871-5403','84957636');
+INSERT INTO HallOfResidence (hallNo,hallName,streetAddress,cityAddress,postcodeAddress,telNo,managerNo) VALUES ('93555726','Mason Hall','4243 Ac Road','Leuze','18048','(505) 332-9052','84957636');
+INSERT INTO HallOfResidence (hallNo,hallName,streetAddress,cityAddress,postcodeAddress,telNo,managerNo) VALUES ('58208202','Dammer Hall','6960 Ac Rd.','Fredericton','69631','(153) 902-4920','84957636');
+INSERT INTO HallOfResidence (hallNo,hallName,streetAddress,cityAddress,postcodeAddress,telNo,managerNo) VALUES ('85307631','Shembeck hall','4328 Ac, Avenue','Concepción','98239','(539) 699-0874','18506643');
+INSERT INTO HallOfResidence (hallNo,hallName,streetAddress,cityAddress,postcodeAddress,telNo,managerNo) VALUES ('54282278','South Hall','718 Dolor. Street','Mysore','05711','(171) 426-6007','18506643');
+
+
+
+INSERT INTO HallRoom (placeNo,roomNo,rentRate, hallNo) VALUES ('4674','3980',736, 46973507);
+INSERT INTO HallRoom (placeNo,roomNo,rentRate, hallNo) VALUES ('2682','4974',873, 46973507);
+INSERT INTO HallRoom (placeNo,roomNo,rentRate, hallNo) VALUES ('4750','6346',864, 93555726);
+INSERT INTO HallRoom (placeNo,roomNo,rentRate, hallNo) VALUES ('1683','5031',915, 58208202);
+INSERT INTO HallRoom (placeNo,roomNo,rentRate, hallNo) VALUES ('3972','5460',986, 85307631);
+INSERT INTO HallRoom (placeNo,roomNo,rentRate, hallNo) VALUES ('6238','5439',891, 54282278);
+INSERT INTO HallRoom (placeNo,roomNo,rentRate, hallNo) VALUES ('9723','2925',849, 54282278);
+
+
+
+INSERT INTO Flat (flatNo,streetAddress,cityAddress,postcodeAddress,roomsAvailable) VALUES ('2338','4363 Vulputate Avenue','Masterton','93462',2);
+INSERT INTO Flat (flatNo,streetAddress,cityAddress,postcodeAddress,roomsAvailable) VALUES ('5928','475-1907 Molestie Street','Wels','60613',1);
+INSERT INTO Flat (flatNo,streetAddress,cityAddress,postcodeAddress,roomsAvailable) VALUES ('1104','5242 Et Ave','West Valley City','48671',3);
+INSERT INTO Flat (flatNo,streetAddress,cityAddress,postcodeAddress,roomsAvailable) VALUES ('7209','8879 Libero. Avenue','Isca sullo Ionio','01584',2);
+INSERT INTO Flat (flatNo,streetAddress,cityAddress,postcodeAddress,roomsAvailable) VALUES ('9856','156 Luctus Rd.','Göppingen','94902',5);
+
+
+
+INSERT INTO FlatRoom (placeNo,roomNo,rentRate,flatNo) VALUES ('1735','1354',928,'2338');
+INSERT INTO FlatRoom (placeNo,roomNo,rentRate,flatNo) VALUES ('8262','3021',754,'2338');
+INSERT INTO FlatRoom (placeNo,roomNo,rentRate,flatNo) VALUES ('8363','6451',609,'5928');
+INSERT INTO FlatRoom (placeNo,roomNo,rentRate,flatNo) VALUES ('0615','5709',823,'5928');
+INSERT INTO FlatRoom (placeNo,roomNo,rentRate,flatNo) VALUES ('8383','0018',978,'1104');
+INSERT INTO FlatRoom (placeNo,roomNo,rentRate,flatNo) VALUES ('6995','1391',741,'7209');
+INSERT INTO FlatRoom (placeNo,roomNo,rentRate,flatNo) VALUES ('1643','9066',719,'9856');
+INSERT INTO FlatRoom (placeNo,roomNo,rentRate,flatNo) VALUES ('0544','4989',809,'9856');
+
+
+
+INSERT INTO Lease (leaseNo,leaseDuration,entryDate,leaveDate,year,rentRate,stuMatriculationNo,hallPlaceNo,flatPlaceNo) VALUES ('60157260',3,'29-SEP-17','29-APR-17',2017,879,'70924181','4674', NULL);
+INSERT INTO Lease (leaseNo,leaseDuration,entryDate,leaveDate,year,rentRate,stuMatriculationNo,hallPlaceNo,flatPlaceNo) VALUES ('28942521',3,'12-SEP-17','30-APR-17',2017,928,'48061991', NULL,'1735');
+INSERT INTO Lease (leaseNo,leaseDuration,entryDate,leaveDate,year,rentRate,stuMatriculationNo,hallPlaceNo,flatPlaceNo) VALUES ('10257334',3,'02-SEP-17','27-APR-17',2017,927,'37182658', NULL,'8262');
+INSERT INTO Lease (leaseNo,leaseDuration,entryDate,leaveDate,year,rentRate,stuMatriculationNo,hallPlaceNo,flatPlaceNo) VALUES ('19283626',1,'14-SEP-17','29-APR-17',2017,942,'29266565','2682', NULL);
+INSERT INTO Lease (leaseNo,leaseDuration,entryDate,leaveDate,year,rentRate,stuMatriculationNo,hallPlaceNo,flatPlaceNo) VALUES ('79381983',2,'04-SEP-17','29-APR-17',2017,945,'95331889', NULL,'8363');
+INSERT INTO Lease (leaseNo,leaseDuration,entryDate,leaveDate,year,rentRate,stuMatriculationNo,hallPlaceNo,flatPlaceNo) VALUES ('38350743',3,'20-SEP-17','29-APR-17',2017,849,'50176911','4750', NULL);
+INSERT INTO Lease (leaseNo,leaseDuration,entryDate,leaveDate,year,rentRate,stuMatriculationNo,hallPlaceNo,flatPlaceNo) VALUES ('03481131',2,'20-SEP-17','30-APR-17',2017,842,'67029780','1683', NULL);
+INSERT INTO Lease (leaseNo,leaseDuration,entryDate,leaveDate,year,rentRate,stuMatriculationNo,hallPlaceNo,flatPlaceNo) VALUES ('94412586',1,'21-SEP-17','29-APR-17',2017,654,'97931360',NULL,'0615');
+
+
+
+INSERT INTO Invoice (invoiceNo,semester,paymentDue,leaseNo) VALUES ('9275094896',1,700,'60157260');
+INSERT INTO Invoice (invoiceNo,semester,paymentDue,leaseNo) VALUES ('7370315701',1,700,'28942521');
+INSERT INTO Invoice (invoiceNo,semester,paymentDue,leaseNo) VALUES ('1405627335',2,200,'10257334');
+INSERT INTO Invoice (invoiceNo,semester,paymentDue,leaseNo) VALUES ('4414356014',1,800,'19283626');
+INSERT INTO Invoice (invoiceNo,semester,paymentDue,leaseNo) VALUES ('9539520680',2,400,'79381983');
+INSERT INTO Invoice (invoiceNo,semester,paymentDue,leaseNo) VALUES ('9829385998',3,900,'38350743');
+INSERT INTO Invoice (invoiceNo,semester,paymentDue,leaseNo) VALUES ('5091731400',3,300,'03481131');
+INSERT INTO Invoice (invoiceNo,semester,paymentDue,leaseNo) VALUES ('0622860546',3,400,'94412586');
+
+
+INSERT INTO Payment (paymentNo,amount,invoicePayDate,paymentMethod,firstReminderDate,secondReminderDate,invoiceNo) VALUES ('721291906650',200,'02-MAY-18','Credit Card','18-FEB-18','18-JAN-18','9275094896');
+INSERT INTO Payment (paymentNo,amount,invoicePayDate,paymentMethod,firstReminderDate,secondReminderDate,invoiceNo) VALUES ('590235958575',300,'26-SEP-17','Credit Card','15-SEP-17','19-SEP-17','7370315701');
+INSERT INTO Payment (paymentNo,amount,invoicePayDate,paymentMethod,firstReminderDate,secondReminderDate,invoiceNo) VALUES ('499124162305',200,'19-JAN-18','e-Check','06-MAR-18','03-DEC-17','1405627335');
+INSERT INTO Payment (paymentNo,amount,invoicePayDate,paymentMethod,firstReminderDate,secondReminderDate,invoiceNo) VALUES ('036617071012',150,'30-NOV-17','e-check','07-MAY-17','21-JUL-17','4414356014');
+INSERT INTO Payment (paymentNo,amount,invoicePayDate,paymentMethod,firstReminderDate,secondReminderDate,invoiceNo) VALUES ('010952961585',400,'13-NOV-17','Credit Card','04-JAN-17','30-MAY-17','9539520680');
+INSERT INTO Payment (paymentNo,amount,invoicePayDate,paymentMethod,firstReminderDate,secondReminderDate,invoiceNo) VALUES ('453347821674',100,'29-MAY-18','e-check','05-MAY-18','07–MAR-18','9829385998');
+INSERT INTO Payment (paymentNo,amount,invoicePayDate,paymentMethod,firstReminderDate,secondReminderDate,invoiceNo) VALUES ('175730223907',150,'12-NOV-17','Credit Card','10-APR-17','26-JUN-17','5091731400');
+INSERT INTO Payment (paymentNo,amount,invoicePayDate,paymentMethod,firstReminderDate,secondReminderDate,invoiceNo) VALUES ('614301796285',400,'22-NOV-17','e-check','29-AUG-17','07-SEP-17','0622860546');
+
+
+INSERT INTO Inspection (inspectionNo,inspectionDate,satisfactionCondition,comments,flatNo,inspectorNo) VALUES ('108159514855','29-DEC-17','S','Well kept','2338','46132948');
+INSERT INTO Inspection (inspectionNo,inspectionDate,satisfactionCondition,comments,flatNo,inspectorNo) VALUES ('950089587254','16-DEC-17','N','Needs cleaning','5928','46132948');
+INSERT INTO Inspection (inspectionNo,inspectionDate,satisfactionCondition,comments,flatNo,inspectorNo) VALUES ('948120559245','15-NOV-17','S','Very well kept','1104','96409394');
+INSERT INTO Inspection (inspectionNo,inspectionDate,satisfactionCondition,comments,flatNo,inspectorNo) VALUES ('404780110671','01-JAN-18','N','Total disaster','7209','96409394');
